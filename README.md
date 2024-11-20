@@ -39,7 +39,7 @@ This project involves a systematic approach to analyze the dataset and build a p
 4. **Model Development**:
    - Built and trained a regression model using deep learning techniques with TensorFlow and Keras.
    - Used Ensemble method to group different regressors for the better outcome
-   - Evaluated the model's performance using metrics such as **Mean Absolute Error (MAE)** and **Mean Squared Error (MSE)**.
+   - Evaluated the model's performance using metrics such as **Mean Absolute Error (MAE)** and **R^2**.
    - Used GridSearch to predict the best model and its parameters
 5. **Predictions**:
    - Used the trained model to predict house prices for unseen data.
@@ -48,7 +48,7 @@ This project involves a systematic approach to analyze the dataset and build a p
 ---
 
 ## Key Highlights
-- ### Model Performance Comparison
+- #### Model Performance Comparison
 
 The table below summarizes the performance of various regression models used for predicting California housing prices:
 
@@ -58,12 +58,13 @@ The table below summarizes the performance of various regression models used for
 | `SVR()`                       | 86,797.11                | -0.0400         |
 | `RandomForestRegressor()`     | 43,122.17                | 0.7045          |
 | `VotingRegressor()`           | 45,088.27                | 0.6917          |
-| **ANN**                       | 47,434.75 (Validation)   | N/A             |
+| `ANN`                         | 47,434.75 (Validation)   | N/A             |
 
 ---
 
 ## Observations
-- The **RandomForestRegressor** achieved the best performance with the lowest MAE (43,122.17) and the highest R² score (0.7045).
+- As the **RandomForestRegressor** achieved the best performance with the lowest MAE (43,122.17) and the highest R² score (0.7045), we used this model to predict our future prices
+
 ---
 
 
