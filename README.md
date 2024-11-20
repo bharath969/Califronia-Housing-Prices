@@ -38,8 +38,9 @@ This project involves a systematic approach to analyze the dataset and build a p
 
 4. **Model Development**:
    - Built and trained a regression model using deep learning techniques with TensorFlow and Keras.
+   - Used Ensemble method to group different regressors for the better outcome
    - Evaluated the model's performance using metrics such as **Mean Absolute Error (MAE)** and **Mean Squared Error (MSE)**.
-
+   - Used GridSearch to predict the best model and its parameters
 5. **Predictions**:
    - Used the trained model to predict house prices for unseen data.
    - Validated the model's reliability by comparing predicted values to actual prices.
@@ -47,7 +48,22 @@ This project involves a systematic approach to analyze the dataset and build a p
 ---
 
 ## Key Highlights
+- ### Model Performance Comparison
 
-- **Deep Learning**: Leveraged a neural network for regression tasks, demonstrating its capability to capture complex relationships in the data.
-- **Feature Engineering**: Preprocessed categorical and numerical features effectively to improve model accuracy.
-- **Performance Monitoring**: Tracked model performance over training epochs and fine-tuned the architecture for optimal results.
+The table below summarizes the performance of various regression models used for predicting California housing prices:
+
+| Model                         | Mean Absolute Error (MAE) | Score (R²)      |
+|-------------------------------|---------------------------|-----------------|
+| `LinearRegression()`          | 50,976.30                | 0.6201          |
+| `SVR()`                       | 86,797.11                | -0.0400         |
+| `RandomForestRegressor()`     | 43,122.17                | 0.7045          |
+| `VotingRegressor()`           | 45,088.27                | 0.6917          |
+| **ANN**                       | 47,434.75 (Validation)   | N/A             |
+
+---
+
+## Observations
+- The **RandomForestRegressor** achieved the best performance with the lowest MAE (43,122.17) and the highest R² score (0.7045).
+---
+
+
